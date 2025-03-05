@@ -1,26 +1,288 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* 科幻星空主题 - 亮色模式 */
+  --background: oklch(0.07 0.02 260); /* 深蓝黑色背景 */
+  --foreground: oklch(0.95 0.02 260); /* 明亮文本 */
+  
+  --card: oklch(0.1 0.02 260 / 0.7); /* 半透明深蓝卡片 */
+  --card-foreground: oklch(0.97 0.02 260); /* 卡片文本 */
+  
+  --popover: oklch(0.1 0.04 260 / 0.85);
+  --popover-foreground: oklch(0.95 0.02 260);
+  
+  --primary: oklch(0.65 0.25 280); /* 紫色主题色 */
+  --primary-foreground: oklch(0.1 0.02 260);
+  
+  --secondary: oklch(0.15 0.05 260 / 0.8);
+  --secondary-foreground: oklch(0.95 0.02 260);
+  
+  --muted: oklch(0.15 0.03 260 / 0.7);
+  --muted-foreground: oklch(0.7 0.02 260);
+  
+  --accent: oklch(0.2 0.1 270 / 0.8);
+  --accent-foreground: oklch(0.97 0.02 260);
+  
+  --destructive: oklch(0.65 0.3 20);
+  --destructive-foreground: oklch(0.97 0.02 260);
+  
+  --border: oklch(0.3 0.1 260 / 0.4);
+  --input: oklch(0.2 0.05 260 / 0.4);
+  --ring: oklch(0.65 0.25 280 / 0.7);
+  
+  /* 图表颜色 - 星空主题 */
+  --chart-1: oklch(0.65 0.25 280); /* 紫色 */
+  --chart-2: oklch(0.6 0.25 220); /* 蓝色 */
+  --chart-3: oklch(0.7 0.25 180); /* 青色 */
+  --chart-4: oklch(0.65 0.25 320); /* 粉色 */
+  --chart-5: oklch(0.55 0.25 250); /* 深紫色 */
+  
+  --radius: 0.5rem;
+  
+  /* 侧边栏颜色 */
+  --sidebar: oklch(0.08 0.02 260 / 0.9);
+  --sidebar-foreground: oklch(0.95 0.02 260);
+  --sidebar-primary: oklch(0.65 0.25 280);
+  --sidebar-primary-foreground: oklch(0.1 0.02 260);
+  --sidebar-accent: oklch(0.15 0.05 260 / 0.8);
+  --sidebar-accent-foreground: oklch(0.95 0.02 260);
+  --sidebar-border: oklch(0.3 0.1 260 / 0.4);
+  --sidebar-ring: oklch(0.65 0.25 280 / 0.7);
+}
+
+.dark {
+  /* 暗色模式 - 更深的星空主题 */
+  --background: oklch(0.05 0.01 260);
+  --foreground: oklch(0.97 0.02 260);
+  
+  --card: oklch(0.08 0.02 260 / 0.75);
+  --card-foreground: oklch(0.97 0.02 260);
+  
+  --popover: oklch(0.08 0.02 260 / 0.9);
+  --popover-foreground: oklch(0.97 0.02 260);
+  
+  --primary: oklch(0.7 0.25 280);
+  --primary-foreground: oklch(0.08 0.02 260);
+  
+  --secondary: oklch(0.12 0.04 260 / 0.8);
+  --secondary-foreground: oklch(0.97 0.02 260);
+  
+  --muted: oklch(0.12 0.03 260 / 0.7);
+  --muted-foreground: oklch(0.75 0.02 260);
+  
+  --accent: oklch(0.18 0.1 270 / 0.8);
+  --accent-foreground: oklch(0.97 0.02 260);
+  
+  --destructive: oklch(0.6 0.3 20);
+  --destructive-foreground: oklch(0.97 0.02 260);
+  
+  --border: oklch(0.25 0.1 260 / 0.5);
+  --input: oklch(0.15 0.05 260 / 0.5);
+  --ring: oklch(0.7 0.25 280 / 0.8);
+  
+  /* 暗色图表颜色 */
+  --chart-1: oklch(0.7 0.28 280);
+  --chart-2: oklch(0.65 0.28 220);
+  --chart-3: oklch(0.75 0.28 180);
+  --chart-4: oklch(0.7 0.28 320);
+  --chart-5: oklch(0.6 0.28 250);
+  
+  /* 侧边栏颜色 */
+  --sidebar: oklch(0.06 0.02 260 / 0.95);
+  --sidebar-foreground: oklch(0.97 0.02 260);
+  --sidebar-primary: oklch(0.7 0.25 280);
+  --sidebar-primary-foreground: oklch(0.08 0.02 260);
+  --sidebar-accent: oklch(0.12 0.04 260 / 0.8);
+  --sidebar-accent-foreground: oklch(0.97 0.02 260);
+  --sidebar-border: oklch(0.25 0.1 260 / 0.5);
+  --sidebar-ring: oklch(0.7 0.25 280 / 0.8);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .video-background-wrapper {
+    @apply fixed top-0 left-0 w-full h-full overflow-hidden;
+  }
+  
+  .video-background {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+  }
+  
+  .video-overlay {
+    @apply absolute inset-0 bg-background/40; 
+    backdrop-filter: blur(1px);
+  }
+  
+  .content-container {
+    @apply relative min-h-screen;
+  }
+  
+  .card {
+    @apply relative bg-card/80 backdrop-blur-sm border border-border/50 
+           transition-all duration-300 ease-in-out overflow-hidden;
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out;
+    background: radial-gradient(circle at 50% 0%, 
+                var(--primary)/10% 0%, 
+                transparent 60%);
+    z-index: -1;
+  }
+  
+  .card:hover {
+    @apply transform -translate-y-1 border-primary/30;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3),
+                0 0 15px -2px var(--primary)/30%;
+  }
+  
+  .card:hover::before {
+    @apply opacity-100;
+  }
+  
+  .sci-fi-button {
+    @apply relative overflow-hidden transition-all duration-300 ease-in-out;
+  }
+  
+  .sci-fi-button::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out;
+    background: linear-gradient(120deg, 
+                transparent 0%, 
+                transparent 40%, 
+                var(--primary)/20% 50%, 
+                transparent 60%, 
+                transparent 100%);
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+  }
+  
+  .sci-fi-button:hover::after {
+    @apply opacity-100;
+    animation: sheen 1.8s forwards;
+  }
+  
+  /* 进度条科幻效果 */
+  .sci-fi-progress {
+    @apply relative overflow-hidden;
+    box-shadow: 0 0 8px 1px var(--primary)/15% inset;
+  }
+  
+  .sci-fi-progress::before {
+    content: '';
+    @apply absolute top-0 left-0 h-full;
+    width: var(--value);
+    background: linear-gradient(90deg, 
+                var(--primary)/70% 0%, 
+                var(--primary) 50%, 
+                var(--primary)/70% 100%);
+    box-shadow: 0 0 10px 2px var(--primary)/30%;
+    animation: pulse 3s infinite;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .animate-glow {
+    animation: glow 3s infinite alternate;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes glow {
+    from { box-shadow: 0 0 5px 1px var(--primary)/20%; }
+    to { box-shadow: 0 0 15px 2px var(--primary)/50%; }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes sheen {
+    0% { left: -100%; opacity: 0.7; }
+    100% { left: 100%; opacity: 0; }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
 }
