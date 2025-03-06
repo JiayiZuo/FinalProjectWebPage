@@ -49,7 +49,7 @@ const FeaturedSection = () => {
 
   return (
     <section className="py-12 animate-slide-up">
-      <SectionHeader icon={<Star className="h-6 w-6" />} title="Featured Sections" />
+      <SectionHeader icon={<Star className="h-6 w-6" />} title="Profile Showcase" />
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <FeatureCard 

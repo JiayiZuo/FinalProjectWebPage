@@ -37,10 +37,10 @@ const FeatureCard = ({
         <div className="flex flex-wrap gap-2 mb-4">
           {badges.map((badge, index) => (
             <Badge 
-              key={index} 
-              className="bg-primary/20 text-primary-foreground border border-primary/30"
+                key={index} 
+                className="bg-primary/70 text-primary-foreground border-none shadow-md shadow-primary/30 hover:bg-primary transition-all"
             >
-              {badge}
+                {badge}
             </Badge>
           ))}
         </div>
