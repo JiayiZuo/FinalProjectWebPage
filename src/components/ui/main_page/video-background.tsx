@@ -6,7 +6,7 @@ interface VideoBackgroundProps {
   poster?: string;
 }
 
-const VideoBackground: React.FC<VideoBackgroundProps> = ({ src, poster }) => {
+const VideoBackground: React.FC<VideoBackgroundProps> = ({ src }) => {
   return (
     <div className="video-background-wrapper">
       <video 
@@ -15,7 +15,6 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ src, poster }) => {
         muted
         loop
         playsInline
-        poster={poster}
       >
         <source src={src} type="video/mp4" />
       </video>
