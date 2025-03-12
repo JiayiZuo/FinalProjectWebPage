@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from '@/components/layout/navbar';
-import Footer from '@/components/layout/footer';
-import VideoBackground from '@/components/ui/main_page/video-background';
-import HeroSection from '@/components/sections/HeroSection';
-import FeaturedSection from '@/components/sections/FeaturedSection';
-import SkillsSection from '@/components/sections/SkillsSection';
-import ProjectsSection from '@/components/sections/ProjectsSection';
-import ContactSection from '@/components/sections/ContactSection';
+import Navbar from '@/components/ui/main_page/Navbar';
+import Footer from '@/components/ui/main_page/Footer';
+import VideoBackground from '@/components/ui/main_page/VideoBackground';
+import HeroSection from '@/components/ui/main_page/sections/HeroSection';
+import FeaturedSection from '@/components/ui/main_page/sections/FeaturedSection';
+import SkillsSection from '@/components/ui/main_page/sections/SkillsSection';
+import ProjectsSection from '@/components/ui/main_page/sections/ProjectsSection';
+import ContactSection from '@/components/ui/main_page/sections/ContactSection';
 
 const HomePage = () => {
   return (
