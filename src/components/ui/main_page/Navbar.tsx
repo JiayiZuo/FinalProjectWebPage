@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 'use client';
 
 import React, { useState } from 'react';
@@ -23,7 +22,7 @@ const Navbar = () => {
       
       {/* Navbar Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border/30 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="font-bold text-xl">
             <Link href="/" className="text-primary hover:opacity-80 transition-opacity">Li, Xinlei</Link>
