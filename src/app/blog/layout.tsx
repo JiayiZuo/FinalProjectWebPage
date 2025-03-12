@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import '@/styles/globals.css';
+import '@/styles/theme.css';
 import siteConfig from '@/config/site';
 import Link from 'next/link';
 
