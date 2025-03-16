@@ -103,17 +103,17 @@
 
 /* Daylight Theme Overrides */
 .light {
-  --background: oklch(0.98 0.02 260); /* Bright light blue-white background */
+  --background: #ffffff; /* Pure white background */
   --foreground: oklch(0.15 0.02 260); /* Dark text */
 
-  --card: oklch(0.97 0.02 260 / 0.8); /* Semi-transparent light card */
-  --card-foreground: oklch(0.2 0.02 260); /* Card text */
+  --card: rgba(255, 255, 255, 0.6);
+  --card-foreground: oklch(0.2 0.02 260);
 
   --popover: oklch(0.96 0.04 260 / 0.9);
   --popover-foreground: oklch(0.15 0.02 260);
 
   --primary: oklch(0.55 0.24 280); /* Slightly darker purple */
-  --primary-foreground: oklch(0.98 0.02 260);
+  --primary-foreground: #ffffff; /* White text for primary elements */
 
   --secondary: oklch(0.89 0.05 260 / 0.8);
   --secondary-foreground: oklch(0.2 0.02 260);
@@ -125,7 +125,7 @@
   --accent-foreground: oklch(0.2 0.02 260);
 
   --destructive: oklch(0.65 0.3 20);
-  --destructive-foreground: oklch(0.98 0.02 260);
+  --destructive-foreground: #ffffff; /* White text for destructive elements */
 
   --border: oklch(0.75 0.1 260 / 0.3);
   --input: oklch(0.85 0.05 260 / 0.3);
@@ -142,7 +142,7 @@
   --sidebar: oklch(0.95 0.02 260 / 0.9);
   --sidebar-foreground: oklch(0.2 0.02 260);
   --sidebar-primary: oklch(0.55 0.24 280);
-  --sidebar-primary-foreground: oklch(0.98 0.02 260);
+  --sidebar-primary-foreground: #ffffff; /* White text for sidebar primary elements */
   --sidebar-accent: oklch(0.89 0.05 260 / 0.8);
   --sidebar-accent-foreground: oklch(0.2 0.02 260);
   --sidebar-border: oklch(0.75 0.1 260 / 0.3);

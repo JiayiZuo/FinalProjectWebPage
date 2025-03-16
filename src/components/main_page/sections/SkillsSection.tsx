@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cpu, Code, Zap } from 'lucide-react';
-import SectionHeader from '@/components/ui/main_page/SectionHeader';
-import SkillBar from '@/components/ui/main_page/SkillBar';
+import SectionHeader from '@/components/main_page/SectionHeader';
+import SkillBar from '@/components/main_page/SkillBar';
 
 const SkillsSection = () => {
   const frontendSkills = [

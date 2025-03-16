@@ -2,8 +2,8 @@ import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import SectionHeader from '@/components/ui/main_page/SectionHeader';
-import ContactCard from '@/components/ui/main_page/ContactCard';
+import SectionHeader from '@/components/main_page/SectionHeader';
+import ContactCard from '@/components/main_page/ContactCard';
 
 const ContactSection = () => (
   <section className="py-12 animate-slide-up">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import SectionHeader from '@/components/ui/main_page/SectionHeader';
-import FeatureCard from '@/components/ui/main_page/FeatureCard';
+import SectionHeader from '@/components/main_page/SectionHeader';
+import FeatureCard from '@/components/main_page/FeatureCard';
 
 const FeaturedSection = () => {
   const features = [

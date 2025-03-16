@@ -1,7 +1,7 @@
 import React from 'react';
 import { Star } from 'lucide-react';
-import SectionHeader from '@/components/ui/main_page/SectionHeader';
-import ProjectCard from '@/components/ui/main_page/ProjectCard';
+import SectionHeader from '@/components/main_page/SectionHeader';
+import ProjectCard from '@/components/main_page/ProjectCard';
 
 const ProjectsSection = () => {
   const projects = [
