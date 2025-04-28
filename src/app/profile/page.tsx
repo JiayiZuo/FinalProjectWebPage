@@ -2,12 +2,10 @@
 
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Globe } from 'lucide-react'
 import { FaMedal, FaTrophy, FaCalculator } from 'react-icons/fa'
 import Navbar from '@/components/main_page/Navbar'
 import Footer from '@/components/main_page/Footer'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+
 
 const Page = () => {
   useEffect(() => {
@@ -99,64 +97,9 @@ const Page = () => {
       <Navbar />
       
       {/* Main Content */}
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="py-20 md:py-32 text-center relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.h1 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500"
-              style={{ fontFamily: 'Audiowide, cursive' }}
-            >
-              Li Xinlei
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-8 text-foreground"
-            >
-              Computer Science & Multimedia Computing Professional
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex justify-center space-x-4"
-            >
-              <Button 
-                variant="default" 
-                asChild 
-                className="flex items-center"
-              >
-                <Link href="mailto:lixinlei@connect.hku.hk">
-                  <Mail className="mr-2 h-4 w-4" />Contact Me
-                </Link>
-              </Button>
-              <Button 
-                variant="outline" 
-                asChild 
-                className="flex items-center"
-              >
-                <Link href="https://ericlee12118.github.io" target="_blank" rel="noopener noreferrer">
-                  <Globe className="mr-2 h-4 w-4" />Visit Blog
-                </Link>
-              </Button>
-            </motion.div>
-          </div>
-          
-          {/* Decorative background elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary opacity-10 rounded-full"></div>
-            <div className="absolute top-20 right-10 w-20 h-20 bg-primary opacity-10 rounded-full"></div>
-            <div className="absolute bottom-10 left-1/4 w-30 h-30 bg-primary opacity-10 rounded-full"></div>
-          </div>
-        </section>
-        
+      <main className="flex-grow">        
         {/* About Section */}
-        <section id="about" className="py-16 bg-muted/50">
+        <section id="about" className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent">
               About Me
@@ -214,7 +157,6 @@ const Page = () => {
                     <p className="text-muted-foreground mb-2">2020.09 - 2024.07</p>
                     <p className="font-medium">Bachelor of Engineering in Computer Science and Technology</p>
                     <p>GPA: 3.25/5.0</p>
-                    <p>English: IELTS: 6.5, CET-6: 536</p>
                   </div>
                 </div>
               </div>
