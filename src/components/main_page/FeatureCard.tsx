@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+// import React, { ReactNode } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -11,7 +12,7 @@ interface FeatureCardProps {
   badges?: string[];
   link: string;
   animationDelay?: string;
-  extraContent?: ReactNode;
+  // extraContent?: ReactNode;
 }
 
 const FeatureCard = ({ 
@@ -21,7 +22,7 @@ const FeatureCard = ({
   badges, 
   link, 
   animationDelay,
-  extraContent
+  // extraContent
 }: FeatureCardProps) => (
   <Card 
     className="card animate-float" 
@@ -45,7 +46,7 @@ const FeatureCard = ({
           ))}
         </div>
       )}
-      {extraContent}
+      {/* {extraContent} */}
     </CardContent>
     <CardFooter>
       <Button variant="outline" asChild className="sci-fi-button">
