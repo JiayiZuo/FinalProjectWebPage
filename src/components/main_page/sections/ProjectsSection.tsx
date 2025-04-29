@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       content: "A personal project using react.js and next.js. You can find details about Miss Zuo here. Technical skills and experiences. Different images at work and after work. Rich and colorful life.",
       technologies: ["React.js", "Next.js"],
       image: "/images/projects/project4.jpg",
-      githubUrl: "https://github.com/JiayiZuo/FinalProject",
+      githubUrl: "https://github.com/JiayiZuo/Self-Introduction",
       demoUrl: "#"
     }
   ];
