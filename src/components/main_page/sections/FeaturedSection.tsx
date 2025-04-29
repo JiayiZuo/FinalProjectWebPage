@@ -52,7 +52,7 @@ const FeaturedSection = () => {
             badges={feature.badges}
             link={feature.link}
             animationDelay={feature.animationDelay}
-            extraContent={feature.extraContent}
+            // extraContent={feature.extraContent}
           />
         ))}
       </div>
