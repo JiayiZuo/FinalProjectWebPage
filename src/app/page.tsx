@@ -4,7 +4,7 @@ import Footer from '@/components/main_page/Footer';
 import VideoBackground from '@/components/main_page/VideoBackground';
 import HeroSection from '@/components/main_page/sections/HeroSection';
 import FeaturedSection from '@/components/main_page/sections/FeaturedSection';
-import SkillsSection from '@/components/main_page/sections/SkillsSection';
+// import SkillsSection from '@/components/main_page/sections/SkillsSection';
 import ProjectsSection from '@/components/main_page/sections/ProjectsSection';
 import ContactSection from '@/components/main_page/sections/ContactSection';
 
@@ -17,7 +17,7 @@ const HomePage = () => {
       <main className="container mx-auto px-4 py-8 content-container">
         <HeroSection />
         <FeaturedSection />
-        <SkillsSection />
+        {/* <SkillsSection /> */}
         <ProjectsSection />
         <ContactSection />
       </main>

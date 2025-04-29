@@ -18,21 +18,21 @@ const HeroSection = () => (
       </div>
       <div className="space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Hi, I&apos;m <span className="text-primary animate-pulse">Li, Xinlei</span>
+          Hi, I&apos;m <span className="text-primary animate-pulse">Zuo Yi</span>
         </h1>
         <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground">
           Software Engineer
         </h2>
         <p className="text-muted-foreground max-w-md">
-          Passionate about building beautiful, functional, and user-friendly applications. 
-          Specializing in frontend development with expertise in React, Next.js, and modern UI frameworks.
+          Experienced in backend development. Basic language: Golang and Python. Familiar with high concurrency scenario and distributed systems. 
+          Interested in Crypto.
         </p>
         <div className="flex gap-4 pt-4">
           <Button size="lg" className="sci-fi-button">
             View Profile
             <MoveRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button variant="outline" size="lg" className="sci-fi-button">
+          <Button size="lg" className="sci-fi-button">
             Download Resume
           </Button>
         </div>

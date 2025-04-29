@@ -40,14 +40,14 @@ const Navbar = () => {
             <Link 
               href="/" 
               className="font-bold text-2xl md:text-3xl bg-gradient-to-r from-indigo-500 to-purple-500 text-transparent bg-clip-text hover:scale-105 transition-transform"
-              style={{ fontFamily: 'Audiowide, cursive' }}
+              style={{ fontFamily: 'Audiowide, cursive', color: 'black'}}
             >
-              Li, Xinlei
+              Zuo Yi
             </Link>
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
-            {['Home', 'Profile', 'Experience', 'Current Work', 'Engineering'].map((item, index) => (
+            {['Home', 'HOBBIES', 'SKILLS', 'EXPERIENCE', 'FUTURE'].map((item, index) => (
               <Link 
                 key={index}
                 href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} 

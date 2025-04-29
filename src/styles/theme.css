@@ -101,52 +101,52 @@
   --sidebar-ring: oklch(0.65 0.25 280 / 0.7);
 }
 
-/* Daylight Theme Overrides */
+/* Daylight Blue Theme Overrides */
 .light {
-  --background: #ffffff; /* Pure white background */
-  --foreground: oklch(0.15 0.02 260); /* Dark text */
+  --background: #f8faff; /* 淡蓝色背景 */
+  --foreground: oklch(0.18 0.03 250); /* 深海军蓝文字 */
 
-  --card: rgba(255, 255, 255, 0.6);
-  --card-foreground: oklch(0.2 0.02 260);
+  --card: rgba(245, 248, 255, 0.85); /* 半透明冰蓝卡片 */
+  --card-foreground: oklch(0.22 0.04 250);
 
-  --popover: oklch(0.96 0.04 260 / 0.9);
-  --popover-foreground: oklch(0.15 0.02 260);
+  --popover: oklch(0.96 0.05 240 / 0.92); /* 天蓝浮层 */
+  --popover-foreground: oklch(0.18 0.03 250);
 
-  --primary: oklch(0.55 0.24 280); /* Slightly darker purple */
-  --primary-foreground: #ffffff; /* White text for primary elements */
+  --primary: oklch(0.58 0.22 235); /* 深海蓝 */
+  --primary-foreground: #ffffff;
 
-  --secondary: oklch(0.89 0.05 260 / 0.8);
-  --secondary-foreground: oklch(0.2 0.02 260);
+  --secondary: oklch(0.82 0.12 210 / 0.88); /* 湖蓝色 */
+  --secondary-foreground: oklch(0.20 0.03 250);
 
-  --muted: oklch(0.9 0.03 260 / 0.7);
-  --muted-foreground: oklch(0.4 0.02 260);
+  --muted: oklch(0.90 0.08 240 / 0.75); /* 淡蓝色 */
+  --muted-foreground: oklch(0.45 0.04 250);
 
-  --accent: oklch(0.87 0.1 270 / 0.8);
-  --accent-foreground: oklch(0.2 0.02 260);
+  --accent: oklch(0.68 0.18 220); /* 宝石蓝 */
+  --accent-foreground: #ffffff;
 
-  --destructive: oklch(0.65 0.3 20);
-  --destructive-foreground: #ffffff; /* White text for destructive elements */
+  --destructive: oklch(0.65 0.3 15); /* 保持橙红色警示 */
+  --destructive-foreground: #ffffff;
 
-  --border: oklch(0.75 0.1 260 / 0.3);
-  --input: oklch(0.85 0.05 260 / 0.3);
-  --ring: oklch(0.55 0.24 280 / 0.6);
+  --border: oklch(0.80 0.10 240 / 0.35); /* 浅蓝边框 */
+  --input: oklch(0.88 0.08 240 / 0.4); /* 输入框蓝光 */
+  --ring: oklch(0.58 0.22 235 / 0.5); /* 主色光晕 */
 
-  /* Chart Colors - Daylight Theme */
-  --chart-1: oklch(0.55 0.24 280); /* Purple */
-  --chart-2: oklch(0.5 0.24 220); /* Blue */
-  --chart-3: oklch(0.6 0.24 180); /* Cyan */
-  --chart-4: oklch(0.55 0.24 320); /* Pink */
-  --chart-5: oklch(0.45 0.24 250); /* Deep Purple */
+  /* 蓝色系图表颜色 */
+  --chart-1: oklch(0.58 0.22 235);  /* 深海蓝 */
+  --chart-2: oklch(0.50 0.20 210);  /* 湖蓝 */
+  --chart-3: oklch(0.65 0.18 240);  /* 天蓝 */
+  --chart-4: oklch(0.45 0.25 260);  /* 午夜蓝 */
+  --chart-5: oklch(0.72 0.15 220);  /* 冰蓝 */
 
-  /* Sidebar Colors */
-  --sidebar: oklch(0.95 0.02 260 / 0.9);
-  --sidebar-foreground: oklch(0.2 0.02 260);
-  --sidebar-primary: oklch(0.55 0.24 280);
-  --sidebar-primary-foreground: #ffffff; /* White text for sidebar primary elements */
-  --sidebar-accent: oklch(0.89 0.05 260 / 0.8);
-  --sidebar-accent-foreground: oklch(0.2 0.02 260);
-  --sidebar-border: oklch(0.75 0.1 260 / 0.3);
-  --sidebar-ring: oklch(0.55 0.24 280 / 0.6);
+  /* 侧边栏 */
+  --sidebar: oklch(0.94 0.06 240 / 0.92); /* 浅蓝毛玻璃 */
+  --sidebar-foreground: oklch(0.22 0.04 250);
+  --sidebar-primary: oklch(0.58 0.22 235);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: oklch(0.82 0.12 210 / 0.88);
+  --sidebar-accent-foreground: oklch(0.20 0.03 250);
+  --sidebar-border: oklch(0.80 0.10 240 / 0.35);
+  --sidebar-ring: oklch(0.58 0.22 235 / 0.5);
 }
 
 /* Base Styles */
@@ -159,7 +159,6 @@
   }
 }
 
-/* Component Styles */
 @layer components {
   .video-background-wrapper {
     @apply fixed top-0 left-0 w-full h-full overflow-hidden;
@@ -169,80 +168,105 @@
     @apply absolute top-0 left-0 w-full h-full object-cover;
   }
   
+  /* 蓝色系遮罩层 */
   .video-overlay {
-    @apply absolute inset-0 bg-background/40; 
-    backdrop-filter: blur(1px);
+    @apply absolute inset-0 bg-gradient-to-b from-sky-400/20 to-blue-900/40;
+    backdrop-filter: contrast(1.1) brightness(1.05);
   }
   
   .content-container {
     @apply relative min-h-screen;
   }
   
+  /* 运动风格卡片（蓝色主题） */
   .card {
-    @apply relative bg-card/80 backdrop-blur-sm border border-border/50 
-           transition-all duration-300 ease-in-out overflow-hidden;
-    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.2);
+    @apply relative bg-white/95 backdrop-blur-sm border-4 border-gray-100 
+           transition-transform duration-200 ease-out overflow-hidden;
+    border-image: linear-gradient(45deg, #8fcde8 0%, #17358d 100%) 1;
+    box-shadow: 0 6px 30px -10px rgba(0, 82, 255, 0.15);
   }
   
   .card::before {
     content: '';
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out;
-    background: radial-gradient(circle at 50% 0%, 
-                var(--primary)/10% 0%, 
-                transparent 60%);
-    z-index: -1;
+    @apply absolute inset-0 opacity-30;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      rgba(0,123,255,0.1) 5px,
+      rgba(0,123,255,0.1) 10px
+    );
   }
   
   .card:hover {
-    @apply transform -translate-y-1 border-primary/30;
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3),
-                0 0 15px -2px var(--primary)/30%;
+    @apply transform scale-[1.02] border-blue-500;
+    box-shadow: 0 12px 40px -10px rgba(61, 131, 245, 0.25),
+                0 0 20px -5px rgba(0,123,255,0.4);
+    animation: card-bounce 0.6s ease;
   }
   
-  .card:hover::before {
-    @apply opacity-100;
-  }
-  
+  /* 运动风格按钮（蓝色主题） */
   .sci-fi-button {
-    @apply relative overflow-hidden transition-all duration-300 ease-in-out;
+    @apply relative overflow-hidden transition-all duration-200 ease-out
+           bg-gradient-to-r from-blue-500 to-indigo-600 font-bold
+           border-2 border-white/80 shadow-lg;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    color: white;
   }
   
   .sci-fi-button::after {
     content: '';
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300 ease-in-out;
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
     background: linear-gradient(120deg, 
-                transparent 0%, 
-                transparent 40%, 
-                var(--primary)/20% 50%, 
-                transparent 60%, 
-                transparent 100%);
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
+                rgba(255,255,255,0) 20%,
+                rgba(255,255,255,0.4) 50%,
+                rgba(255,255,255,0) 80%);
+  }
+  
+  .sci-fi-button:hover {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-700;
   }
   
   .sci-fi-button:hover::after {
     @apply opacity-100;
-    animation: sheen 1.8s forwards;
+    animation: speed-line 0.8s forwards;
   }
   
-  /* Sci-Fi Progress Bar */
+  /* 进度条风格（蓝色主题） */
   .sci-fi-progress {
-    @apply relative overflow-hidden;
-    box-shadow: 0 0 8px 1px var(--primary)/15% inset;
+    @apply relative overflow-hidden bg-blue-100/80;
+    box-shadow: inset 0 2px 4px rgba(0,82,255,0.1);
   }
   
   .sci-fi-progress::before {
     content: '';
     @apply absolute top-0 left-0 h-full;
     width: var(--value);
-    background: linear-gradient(90deg, 
-                var(--primary)/70% 0%, 
-                var(--primary) 50%, 
-                var(--primary)/70% 100%);
-    box-shadow: 0 0 10px 2px var(--primary)/30%;
-    animation: pulse 3s infinite;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.4) 10px,
+      rgba(255,255,255,0.4) 20px
+    ),
+    linear-gradient(90deg, #87c0d8, #2c448b);
+    animation: progress-stripes 2s linear infinite;
+  }
+  
+  /* 动画保持相同结构 */
+  @keyframes card-bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+  
+  @keyframes speed-line {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  @keyframes progress-stripes {
+    from { background-position: 0 0; }
+    to { background-position: 40px 0; }
   }
 }
 

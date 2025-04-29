@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Li, Xinlei's Portfolio",
-  description: "Portfolio of Li, Xinlei",
+  title: "Zuo Yi's Portfolio",
+  description: "Portfolio of Zuo Yi",
 };
 
 export default function RootLayout({

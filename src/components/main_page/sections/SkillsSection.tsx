@@ -5,20 +5,20 @@ import SkillBar from '@/components/main_page/SkillBar';
 
 const SkillsSection = () => {
   const frontendSkills = [
-    { name: "Frontend Development", percentage: 95, icon: <Code /> },
-    { name: "Backend Development", percentage: 85, icon: <Cpu /> },
-    { name: "UI/UX Design", percentage: 80, icon: <Zap /> }
+    { name: "Backend Development", percentage: 90, icon: <Cpu /> },
+    { name: "Golang", percentage: 90, icon: <Code /> },
+    { name: "Python", percentage: 90, icon: <Zap /> }
   ];
   
   const backendSkills = [
-    { name: "DevOps", percentage: 75, icon: <Zap /> },
-    { name: "Cloud Services", percentage: 80, icon: <Cpu /> },
-    { name: "Project Management", percentage: 90, icon: <Code /> }
+    { name: "MySQL", percentage: 80, icon: <Zap /> },
+    { name: "Redis", percentage: 80, icon: <Cpu /> },
+    { name: "Docker", percentage: 80, icon: <Code /> }
   ];
 
   return (
     <section className="py-12 animate-slide-up">
-      <SectionHeader icon={<Cpu className="h-6 w-6" />} title="Skills Showcase" />
+      <SectionHeader icon={<Cpu className="h-6 w-6" />} title="Skills" />
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-6 card p-6">
           {frontendSkills.map((skill, index) => (
