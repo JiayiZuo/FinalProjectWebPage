@@ -18,7 +18,7 @@ const HeroSection = () => (
       </div>
       <div className="space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Hi, I&apos;m <span className="text-primary animate-pulse">Zuo Yi</span>
+          <span className="text-primary animate-pulse">Zuo Yi</span>
         </h1>
         <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground">
           Software Engineer
@@ -32,9 +32,9 @@ const HeroSection = () => (
             View Profile
             <MoveRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button size="lg" className="sci-fi-button">
+          {/* <Button size="lg" className="sci-fi-button">
             Download Resume
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>
