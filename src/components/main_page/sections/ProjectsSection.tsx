@@ -40,6 +40,15 @@ const ProjectsSection = () => {
       image: "/images/projects/project4.jpg",
       githubUrl: "https://github.com/JiayiZuo/Self-Introduction",
       demoUrl: "#"
+    },
+    {
+      title: "Wallet APP ",
+      description: "Backend logic for wallet app behaves",
+      content: "User can deposit/withdraw/transfer/get balance/get transactions with his/her wallet. Including unit testing, global logging, error handling, and permission verification. Built with RESTful API.",
+      technologies: ["Golang", "Postgresql", "Redis"],
+      image: "/images/projects/project5.jpg",
+      githubUrl: "https://github.com/JiayiZuo/WalletApps",
+      demoUrl: "#"
     }
   ];
 
