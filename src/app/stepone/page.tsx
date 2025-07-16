@@ -23,39 +23,23 @@ const Page = () => {
 
   const hobbies = [
     {
-      title: "Tennis",
-      description: "Smash stress away! Tennis is the perfect workout to release tension and clear your mind with every powerful swing.",
-      image: "/images/hobbies/tennis.jpg",
+      image: "/images/hobbies/1-1.jpg",
       videolUrl: "/videos/hobbies/",
     },
     {
-      title: "Hiking",
-      description: "Exploring nature trails and mountains. Completed the Dragon's Back Trail in Hong Kong and planning to hike all around the world.",
-      image: "/images/hobbies/hiking.jpg",
+      image: "/images/hobbies/1-2.jpg",
       videoUrl: "",
     },
     {
-      title: "Climbing",
-      description: "Build powerful muscles with every climb! Rock climbing transforms your body, strengthening arms, back, and core with every gripping challenge.",
-      image: "/images/hobbies/climbing.jpg",
+      image: "/images/hobbies/1-3.jpg",
       videoUrl: "",
     },
     {
-      title: "Surfing",
-      description: "Ride the rhythm of the ocean—surfing is your ultimate dance with the waves, where you and the sea become one.",
-      image: "/images/hobbies/surfing.jpg",
+      image: "/images/hobbies/1-4.jpg",
       videoUrl: "",
     },
     {
-      title: "Diving",
-      description: "See Earth from its hidden side! Scuba diving turns oceans into your looking glass, transforming ordinary views into wonder.",
-      image: "/images/hobbies/diving.jpg",
-      videoUrl: "",
-    },
-    {
-      title: "Skiing",
-      description: "Defy fear, embrace speed! Every run down the mountain is a chance to challenge yourself and discover what you're truly capable of.",
-      image: "/images/hobbies/skiing.jpg",
+      image: "/images/hobbies/1-5.jpg",
       videoUrl: "",
     },
   ];
@@ -68,7 +52,7 @@ const Page = () => {
         <div className="container mx-auto">
           {/* Gradient Title */}
           <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
-            PERSONAL HOBBIES
+            Works we done in step one
           </h2>
   
           {/* Hobbies Grid */}
@@ -84,14 +68,9 @@ const Page = () => {
                 <div className="h-64 overflow-hidden">
                   <img
                     src={hobby.image}
-                    alt={hobby.title}
+                    // alt={hobby.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                </div>
-                {/* Overlay Content */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{hobby.title}</h3>
-                  <p className="text-gray-200">{hobby.description}</p>
                 </div>
               </div>
               ))}
@@ -100,10 +79,10 @@ const Page = () => {
   
           {/* Additional Personal Note */}
           <div className="mt-16 max-w-3xl mx-auto p-8 rounded-lg bg-gradient-to-r from-indigo-50 to-purple-50">
-            <h3 className="text-xl font-semibold mb-4 text-indigo-800">Beyond Study and Work</h3>
+            <h3 className="text-xl font-semibold mb-4 text-indigo-800">Achievements and Difficulties in step one</h3>
             <p className="text-gray-700">
-              These activities help me maintain work-life balance and often inspire creative solutions in my professional work. 
-              I believe hobbies make us more well-rounded individuals and often lead to unexpected connections between different domains.
+              The AI question-answering reobt will analyze the symptoms and details of the situation and out put the preliminary diagnosis resutls.
+              The replies of the large model may be unreasonable or contrary to the original intention of the user and need to be fine-tuned.
             </p>
           </div>
         </div>

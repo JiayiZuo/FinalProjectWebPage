@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+// import { Button } from '@/components/ui/button';
+// import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import SectionHeader from '@/components/main_page/SectionHeader';
 import ContactCard from '@/components/main_page/ContactCard';
 
@@ -13,7 +13,7 @@ const ContactSection = () => (
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <Mail className="h-5 w-5 text-primary" />
-            <span>zuoyi0215@hotmail.com</span>
+            <span>Medibot Group</span>
           </div>
           <div className="flex items-center gap-3">
             <MapPin className="h-5 w-5 text-primary" />
@@ -22,18 +22,21 @@ const ContactSection = () => (
         </div>
       </ContactCard>
 
-      <ContactCard title="Social Media">
+      <ContactCard title="Emails">
         <div className="flex flex-wrap gap-4">
-          <Button variant="outline" size="icon" asChild className="sci-fi-button animate-glow">
-            <a href="https://www.linkedin.com/in/yi-zuo-65989133a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FaLinkedin className="h-5 w-5 text-black-600" />
-            </a>
-          </Button>
-          <Button variant="outline" size="icon" asChild className="sci-fi-button animate-glow">
-            <a href="https://github.com/JiayiZuo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <FaGithub className="h-5 w-5 text-black-600" />
-            </a>
-          </Button>
+          <div className="flex items-center gap-3">
+            <Mail className="h-5 w-5 text-primary" />
+            <span>liuzicheng@connect.hku.hk</span>
+            <Mail className="h-5 w-5 text-primary" />
+            <span>u3637996@connect.hku.hk</span>
+
+          </div>
+          <div className="flex items-center gap-3">
+            <Mail className="h-5 w-5 text-primary" />
+            <span>u3638106@connect.hku.hk</span>
+            <Mail className="h-5 w-5 text-primary" />
+            <span>u3641144@connect.hku.hk</span>
+          </div>
         </div>
       </ContactCard>
     </div>

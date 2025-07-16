@@ -5,7 +5,7 @@ import VideoBackground from '@/components/main_page/VideoBackground';
 import HeroSection from '@/components/main_page/sections/HeroSection';
 import FeaturedSection from '@/components/main_page/sections/FeaturedSection';
 // import SkillsSection from '@/components/main_page/sections/SkillsSection';
-import ProjectsSection from '@/components/main_page/sections/ProjectsSection';
+// import ProjectsSection from '@/components/main_page/sections/ProjectsSection';
 import ContactSection from '@/components/main_page/sections/ContactSection';
 
 const HomePage = () => {
@@ -18,7 +18,7 @@ const HomePage = () => {
         <HeroSection />
         <FeaturedSection />
         {/* <SkillsSection /> */}
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
         <ContactSection />
       </main>
 

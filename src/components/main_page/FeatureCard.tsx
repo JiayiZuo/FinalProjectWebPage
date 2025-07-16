@@ -49,9 +49,9 @@ const FeatureCard = ({
       {/* {extraContent} */}
     </CardContent>
     <CardFooter>
-      <Button variant="outline" asChild className="sci-fi-button">
+      {/* <Button variant="outline" asChild className="sci-fi-button">
         <Link href={link}>Read more</Link>
-      </Button>
+      </Button> */}
     </CardFooter>
   </Card>
 );

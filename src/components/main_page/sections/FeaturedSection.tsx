@@ -6,34 +6,34 @@ import FeatureCard from '@/components/main_page/FeatureCard';
 const FeaturedSection = () => {
   const features = [
     {
-      title: "Interests and Hobbies",
-      description: "What I like to do in my free time",
-      content: "Addicted to sports and unable to extricate myself. Even thinking of physical labor sometime.",
-      badges: ["Tennis", "Climbing", "Diving", "Surfing", "Skiing", "Hiking"],
+      title: "Objective",
+      description: "Basic Technoloy Stack of Medibot",
+      content: "Developed a WeChat mini-program that integrates AI technologies to enhance user experience, incorporating backend logic for intelligent processing and ensuring reliable data persistence through a structured database system.",
+      badges: ["Mini-program", "AI", "Backend"],
       link: "/hobbies",
       animationDelay: "0s"
     },
     {
-      title: "Basic Skills",
-      description: "Technical skills & Language skills",
-      content: "A detailed look at my technical skills, language skills and professional interests.",
-      badges: ["Golang", "Python", "PHP", "MySQL", "Redis", "MQ", "MongoDB"],
+      title: "Core Technoloy",
+      description: "Improvement of existing AI",
+      content: "Built and deployed a WeChat mini-program powered by AI capabilities using DeepSeek and LoRA fine-tuning techniques. Backend was developed with Python Flask to handle logic, supporting real-time user interactions and intelligent responses.",
+      badges: ["DeepSeek", "LoaRA"],
       link: "/skills",
       animationDelay: "0s"
     },
     {
-      title: "Experience",
-      description: "What I have done in the past",
-      content: "Backend developer at Beijing Didi Infinite Technology Development Co., Ltd. Responsible for...",
-      badges: ["Car Hailing", "User Growth", "exaggerated OT"],
+      title: "Achievements",
+      description: "What we have done",
+      content: "User authentication and management; AI-driven intelligent dialogue; preliminary diagnosis generation; health record management; consultation history tracking.",
+      badges: ["AI-driven", "User Management", "Diagnosis"],
       link: "/experience",
       animationDelay: "0s"
     },
     {
-      title: "Future",
-      description: "What will the future look like",
-      content: "Still interested in backend development. Looking for positions related to Crypto.",
-      badges: ["Backend", "Crypto", "BlockChain", "Solidity", "Rust", "I can do anything"],
+      title: "Value Position",
+      description: "Value of Medibot",
+      content: "The distribution of medical resources in China is uneven; There is a growing public need for convenient and professional medical consultation.",
+      badges: ["Medical Resource", "Consultation"],
       link: "/future",
       animationDelay: "0.4s"
     }
@@ -41,7 +41,7 @@ const FeaturedSection = () => {
 
   return (
     <section className="py-12 animate-slide-up">
-      <SectionHeader icon={<Star className="h-6 w-6" />} title="About Myself" />
+      <SectionHeader icon={<Star className="h-6 w-6" />} title="Introduction" />
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <FeatureCard 
