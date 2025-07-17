@@ -50,7 +50,6 @@ const FeaturedSection = () => {
             description={feature.description}
             content={feature.content}
             badges={feature.badges}
-            link={feature.link}
             animationDelay={feature.animationDelay}
             // extraContent={feature.extraContent}
           />
