@@ -10,7 +10,6 @@ interface FeatureCardProps {
   description: string;
   content: string;
   badges?: string[];
-  link: string;
   animationDelay?: string;
   // extraContent?: ReactNode;
 }
@@ -20,7 +19,6 @@ const FeatureCard = ({
   description, 
   content, 
   badges, 
-  link, 
   animationDelay,
   // extraContent
 }: FeatureCardProps) => (
