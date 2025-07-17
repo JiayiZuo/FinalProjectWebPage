@@ -12,10 +12,19 @@ const Page = () => {
   
   // Workplace images for carousel
   const workImages = [
-    "/images/work/work1.jpg",
-    "/images/work/work2.jpg",
-    "/images/work/work3.jpg",
-    "/images/work/work4.jpg",
+    "/images/work/3-1.jpg",
+    "/images/work/3-2.jpg",
+    "/images/work/3-3.jpg",
+    "/images/work/3-4.jpg",
+    "/images/work/3-5.jpg",
+    "/images/work/3-6.jpg",
+    "/images/work/3-7.jpg",
+    "/images/work/3-8.jpg",
+    "/images/work/3-9.jpg",
+    "/images/work/3-10.jpg",
+    "/images/work/3-11.jpg",
+    "/images/work/3-12.jpg",
+    "/images/work/3-13.jpg",
   ]
   
   // Auto-rotate carousel images
@@ -43,74 +52,6 @@ const Page = () => {
     return () => observer.disconnect()
   }, [])
 
-  // Projects data
-  const projects = [
-    {
-      title: "Decentralized Voting System",
-      period: "Personal Project",
-      description: [
-        "Developed a blockchain-based voting DApp with zero-knowledge proofs (ZK-SNARKs) for anonymity. The system allows users to cast votes without revealing their identity or selections, while cryptographically proving the validity of their vote on-chain.",
-        "Based on the concept of Smart Contract Composability in blockchain smart contracts, enabling the voting logic to seamlessly interact with other DeFi protocols or governance systems.",
-        "Integrated smart contracts with frontend via Web3.js, deployed on Ethereum testnet. Key challenges included ensuring ZKP correctness, preventing front-running attacks, and designing a user-friendly flow for proof generation.",
-        "GitHub: https://github.com/JiayiZuo/Crypto"
-      ],
-      skills: ["Crypto", "Solidity", "Smart Contract"]
-    },
-    {
-      title: "High Concurrency Passenger Task System",
-      period: "Core Developer",
-      description: [
-        "Design and implementation of logic for event placement, exposure, collection, completion, and reward distribution, supporting millions of daily active users with a peak QPS of 100k+.",
-        "Implemented batch processing of task events based on Goroutine Pool, controlling concurrency through bounded channels, dynamically adjusting pooling scale, buffer capacityof 100k+ tasks per second.", 
-        "Implemented second level updates of hot event status through Redis Cluster sharded caching.", 
-        "Implemented data persistence layer by MySQL sharding to process over 120 million transactionalrequests per day.", 
-      ],
-      skills: ["Golang", "JAVA", "PHP", "MySQL", "Redis", "Message Queue"]
-    },
-    {
-      title: "Channel Templating",
-      period: "Director",
-      description: [
-        "Implemented cross module calls by gRPC protocol, reduced module dependencies by 70% and increasing the overall system throughput to 80k+ QPS.",
-        "Built a parameterized template engine, decouple interaction logic and business rules through meta programming strategy, defined 23 types of universal interaction protocol templates achieved channel code reuse rate>90%, reduced codemaintenance costs by 70%.",
-        "Implemented a template based architecture driven by a dynamic configuration center, supported YAML/JSON declarative descriptions, with parameter configuration items covering over 200 business variables, reduced the requirementiteration cycle to 0.5 person days per functional point.",
-      ],
-      skills: ["Golang", "MySQL", "Redis"]
-    },
-    {
-      title: "CRM System Construction",
-      period: "Core Developer",
-      description: [
-        "Designed framework based on strategies and templates, implement interaction with downstream systems in a light coupling and flexible manner.",
-        "Designed dynamicThreadPoolExecutor to execute large-scale OLAP queries, with core parameters. Thread pool size: 50~200 workers. Capacity of boundedqueue: 10k tasks.",
-        "Built Hive to MySQL incremental synchronization pipeline to process 120TB+ budget data in a singleday, increased complex query efficiency by 8.5 times.", 
-        "Compared 2PC, 3PC, TCC and other schemes, ultimately designed the final consistency framework based on the Saga transaction pattern. Implemented event driven compensation mechanism, supported forward operation atomic submission and backward compensation operation idempotent retry.",
-      ],
-      skills: ["Golang", "JAVA", "PHP", "MySQL", "Redis", "Distributed Systems"]
-    },
-    {
-      title: "Upgrade of Operation Configuration Platform",
-      period: "Director",
-      description: [
-        "Based on inversion of control and strategy pattern, decomposed triggers, conditions and actions into independent atomized modules, dynamically combined through JSON Schema visualization orchestration.", 
-        "Refactored single task model into a directed acyclic graph driven task tree, supported any topology combination, optimized execution paths through topology sorting algorithms, improved complex task flow average end-to-end latency from 45s to 15s.", 
-        "Built declarative task template engine based on Metadata Driven Architecture to achieve zero code creation of new task types. Implemented defining task logic through YAML descriptors, compressed requirement delivery cycle from 7 person days per type to 0.5 person days.", 
-      ],
-      skills: ["Golang", "JAVA", "PHP", "MySQL", "Redis", "Distributed Systems"]
-    },
-    {
-      title: "LanHu System Construction",
-      period: "Director",
-      description: [
-        "Developed iteration of core functions of LanHu products, such as custom sorting of images, display and management of annotations in team space, and management of team members.", 
-        "Build a new operation platform and complete subsequent functional iterations to achieve autonomous operation processing, maintain user relationships, and meet user and operational demands, breaking away from operational dependence on R&D communication.", 
-        "In the process of product commercialization, implement logical processing that meets financial data requirements and iterate the development of financial systems.",
-        "Implemented a white board mode from zero to one. Supported real time cooperation with mult-format documents."
-      ],
-      skills: ["Golang", "JAVA", "PHP", "MySQL", "Redis", "Distributed Systems"]
-    }
-  ]
-
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}
@@ -121,15 +62,15 @@ const Page = () => {
         {/* Hero Carousel Section - Added at the top */}
         <div className="pt-16">
           <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
-            LIFE IN EBRAM
+            Progress of Step Three
           </h2>
         </div>
         <section className="relative mx-auto my-8 max-w-3xl"> 
-          <div className="relative h-[480px] w-full overflow-hidden">
+          <div className="relative w-full overflow-auto flex justify-center">
             <img
               src={workImages[currentImage]}
               alt="Workplace environment"
-              className="w-full h-full object-cover transition-opacity duration-500"
+              className="w-auto h-auto max-w-full max-h-[80vh] object-contain transition-opacity duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent flex items-end pb-16">
               <div className="container mx-auto px-4 text-center">
@@ -191,7 +132,7 @@ const Page = () => {
         <section id="education" className="py-16 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
-              EDUCATION AND WORK EXPERIENCE
+              Details of Step Three
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="relative education-timeline">
@@ -199,16 +140,15 @@ const Page = () => {
                 <div className="mb-12 flex items-start gap-6 md:ml-auto md:w-full">
                   <div className="hidden md:block w-100 h-50 flex-shrink-0">
                     <img 
-                      src="/images/projects/hku.jpg" 
-                      alt="HKU Logo"
+                      src="/images/work/3-3.jpg" 
+                      alt="Medibot Logo"
                       className="w-full h-full object-cover rounded-lg shadow-md" 
                     />
                   </div>
                   <div className="md:w-1/2 md:pl-8 animate-on-scroll education-item">
                     <div className="p-6 rounded-lg shadow-md bg-card text-card-foreground">
-                      <h3 className="text-xl font-bold mb-2">The University of Hong Kong (HKU)</h3>
-                      <p className="font-medium">Master of Science in Computer Science</p>
-                      <p className="italic">General Stream</p>
+                      <h3 className="text-xl font-bold mb-2">Front-end Page</h3>
+                      <p className="font-medium">Added several UX modulesNight Mode Toggle. To add a dark/light theme toggle. Three levels of font size selection for the convenience of elderly users. Quick question template customization.</p>
                     </div>
                   </div>
                 </div>
@@ -216,32 +156,80 @@ const Page = () => {
                 <div className="mb-12 flex items-start gap-6 md:ml-auto md:w-full">
                   <div className="mb-12 md:mr-auto md:w-1/2 md:pr-8 animate-on-scroll education-item">
                     <div className="p-6 rounded-lg shadow-md bg-card text-card-foreground">
-                      <h3 className="text-xl font-bold mb-2">Beijing Didi Infinite Technology Development Co., Ltd.</h3>
-                      <p className="italic">Backend Developer</p>
+                      <h3 className="text-xl font-bold mb-2">Front-end Page</h3>
+                      <p className="font-medium">Personal information form. Gender, age height, weight. History of allergies, chronic diseases, family history, etc. Recent consultations displays the latest 3 consultation records.</p>
                     </div>
                   </div>
-                  <div className="hidden md:block w-100 h-30 flex-shrink-0">
+                  <div className="hidden md:block w-100 h-50 flex-shrink-0">
                     <img 
-                      src="/images/projects/DiDi.jpg" 
-                      alt="DiDi Logo"
+                      src="/images/work/3-6.jpg" 
+                      alt="Medibot Logo"
                       className="w-full h-full object-cover rounded-lg shadow-md" 
                     />
                   </div>
                 </div>
 
                 <div className="mb-12 flex items-start gap-6 md:ml-auto md:w-full">
-                  <div className="hidden md:block w-100 h-30 flex-shrink-0">
+                  <div className="hidden md:block w-100 h-50 flex-shrink-0">
                     <img 
-                      src="/images/projects/bupt.jpg" 
-                      alt="bupt Logo"
+                      src="/images/work/3-7.jpg" 
+                      alt="Medibot Logo"
                       className="w-full h-full object-cover rounded-lg shadow-md" 
                     />
                   </div>
                   <div className="mb-12 md:ml-auto md:w-1/2 md:pr-8 animate-on-scroll education-item">
                     <div className="p-6 rounded-lg shadow-md bg-card text-card-foreground">
-                      <h3 className="text-xl font-bold mb-2">Beijing University of Posts and Telecommunications (BUPT)</h3>
-                      <p className="italic">Electromagnetic Fields and Wireless Technology</p>
+                      <h3 className="text-xl font-bold mb-2">Backend Design</h3>
+                      <p className="font-medium">Call the health information interface to obtain health information atricles, supporting keyword search. Using Redis cache to avoid frequent and long-latency requests with ttl 3600s.</p>
                     </div>
+                  </div>
+                </div>
+
+                <div className="mb-12 flex items-start gap-6 md:ml-auto md:w-full">
+                  <div className="mb-12 md:mr-auto md:w-1/2 md:pr-8 animate-on-scroll education-item">
+                    <div className="p-6 rounded-lg shadow-md bg-card text-card-foreground">
+                      <h3 className="text-xl font-bold mb-2">Backend Design</h3>
+                      <p className="font-medium">Using celery to scan data from database an send scheduled task to certain user. Using command to start redis and celery server. Apply an official email for medibot. </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:block w-100 h-50 flex-shrink-0">
+                    <img 
+                      src="/images/work/3-10.jpg" 
+                      alt="Medibot Logo"
+                      className="w-full h-full object-cover rounded-lg shadow-md" 
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-12 flex items-start gap-6 md:ml-auto md:w-full">
+                  <div className="hidden md:block w-100 h-50 flex-shrink-0">
+                    <img 
+                      src="/images/work/3-11.jpg" 
+                      alt="Medibot Logo"
+                      className="w-full h-full object-cover rounded-lg shadow-md" 
+                    />
+                  </div>
+                  <div className="mb-12 md:ml-auto md:w-1/2 md:pr-8 animate-on-scroll education-item">
+                    <div className="p-6 rounded-lg shadow-md bg-card text-card-foreground">
+                      <h3 className="text-xl font-bold mb-2">Lora Fine-Tuning and Effects</h3>
+                      <p className="font-medium">We retrained an English version of the model using LoRA. The lowest point was reached around 305 steps. The model achieved a significant improvement in scores.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-12 flex items-start gap-6 md:ml-auto md:w-full">
+                  <div className="mb-12 md:mr-auto md:w-1/2 md:pr-8 animate-on-scroll education-item">
+                    <div className="p-6 rounded-lg shadow-md bg-card text-card-foreground">
+                      <h3 className="text-xl font-bold mb-2">Lora Fine-Tuning and Effects</h3>
+                      <p className="font-medium">These figures demonstrate the performance of the English version, which maintains full functional parity with the Chinese variant.</p>
+                    </div>
+                  </div>
+                  <div className="hidden md:block w-100 h-50 flex-shrink-0">
+                    <img 
+                      src="/images/work/3-13.jpg" 
+                      alt="Medibot Logo"
+                      className="w-full h-full object-cover rounded-lg shadow-md" 
+                    />
                   </div>
                 </div>
 
@@ -250,44 +238,6 @@ const Page = () => {
           </div>
         </section>
         
-        {/* Projects Section */}
-        <section id="projects" className="py-16 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
-              PROJECT EXPERIENCE
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl bg-card text-card-foreground"
-                >
-                  <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground mb-3">{project.period}</p>
-                  <ul className="list-disc list-inside mb-4 space-y-2">
-                    {project.description.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap mt-4">
-                    {project.skills.map((skill, i) => (
-                      <span 
-                        key={i} 
-                        className="inline-block px-3 py-1 m-1 rounded-full text-sm bg-primary/10 text-primary"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>      
       <Footer />
     </div>

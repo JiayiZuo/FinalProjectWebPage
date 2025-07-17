@@ -74,53 +74,6 @@ const FadeIn: React.FC<{
 }
 
 const WorkExperiencePage: React.FC = () => {
-  // For image carousel
-  // const [currentImage, setCurrentImage] = useState(0)
-  
-  // Example workplace images (replace with your actual images)
-  // const workImages = [
-  //   "/placeholder-1.jpg",
-  //   "/placeholder-2.jpg",
-  //   "/placeholder-3.jpg",
-  //   "/placeholder-4.jpg",
-  // ]
-  
-  // Auto-rotate carousel images
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentImage((prev) => (prev + 1) % workImages.length)
-  //   }, 5000)
-    
-  //   return () => clearInterval(interval)
-  // }, [workImages.length])
-  
-  // Skills data
-  // const skills = [
-  //   { name: "React", level: 85 },
-  //   { name: "TypeScript", level: 80 },
-  //   { name: "API Integration", level: 75 },
-  //   { name: "ECharts", level: 70 },
-  //   { name: "SQL", level: 65 },
-  //   { name: "Unit Testing", level: 60 },
-  // ]
-  
-  // GitLab contribution data
-  // const gitlabStats = {
-  //   commits: 127,
-  //   mergeRequests: 42,
-  //   issues: 38,
-  //   codeAdditions: "8,943 lines",
-  //   codeDeletions: "3,217 lines",
-  //   repositoriesContributed: 5
-  // }
-  
-  // const monthlyContributions = [
-  //   { month: "Jan", commits: 18 },
-  //   { month: "Feb", commits: 22 },
-  //   { month: "Mar", commits: 30 },
-  //   { month: "Apr", commits: 25 },
-  //   { month: "May", commits: 32 }
-  // ]
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -132,23 +85,19 @@ const WorkExperiencePage: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row md:items-center">
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
-              <Badge className="mb-4 text-xs px-3 py-1" variant="outline">Expectation</Badge>
+              <Badge className="mb-4 text-xs px-3 py-1" variant="outline">Medical Assisant</Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                Backend Developer<br></br>
-                Blockchain Developer<br></br>
-                Full Stack Developer
+                MediBot<br></br> Intelligent Healthcare Assistant Platform<br></br>
               </h1>
               <div className="flex items-center mb-6 text-muted-foreground">
                 <Building className="h-5 w-5 mr-2" />
-                <span className="text-lg">Base Hong Kong</span>
+                <span className="text-lg">The University of Hong Kong</span>
               </div>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                I aspire to leverage my expertise in backend systems to build scalable, high-performance architectures while diving deep into blockchain technology to innovate decentralized solutions. 
-                My goal is to contribute to cutting-edge backend infrastructure and blockchain ecosystems, solving complex problems with efficient code and distributed ledger technology. 
-                I seek a role where I can merge my passion for backend engineering with blockchain development, creating secure, scalable systems that push the boundaries of decentralized applications.
+              With the growing use of Large Language Models (LLMs) in various fields, their potential in healthcare is increasingly evident. However, general LLMs lack domain expertise, are costly to deploy, and struggle to provide personalized advice. This project addresses these issues by building an intelligent medical assistant based on personalized health records and fine-tuned LLMs using QLoRA, enabling low-cost adaptation for medical tasks with structured outputs. By integrating users' health data (e.g., allergies, chronic conditions), the system generates personalized consultation suggestions. The architecture features a WeChat Mini Program frontend and a Flask-based backend, with vLLM used for efficient model inference. A complete prototype system was developed, demonstrating the feasibility of this approach for cost-effective, personalized medical consultation.
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
-                {["Golang", "Python", "PHP", "Solidity","MySQL", "Redis", "MongoDB", "MQ"].map((tech, i) => (
+                {["Large Language Model", "Intelligent Consultation", "Personalization", "QLoRA","vLLM", "WeChat Mini Program"].map((tech, i) => (
                   <Badge key={i} variant="secondary" className="text-xs px-3 py-1">
                     {tech}
                   </Badge>
@@ -158,21 +107,27 @@ const WorkExperiencePage: React.FC = () => {
             
             {/* Company logo/image placeholder */}
             <div className="md:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-md h-80 bg-card rounded-xl overflow-hidden shadow-lg border border-border">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-                <div className="w-full h-full flex items-center justify-center">
-                  <img
-                    src="/images/projects/cs.jpg"
-                    alt="cs pic"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute bottom-6 left-6 z-20 text-white">
-                    <h3 className="text-xl font-bold">I am a brick</h3>
-                    <p className="text-sm opacity-80">where to use and where to move</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div className="relative w-full max-w-md h-150 bg-card rounded-xl overflow-hidden shadow-lg border border-border">
+    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="border-4 border-primary/30 p-2 bg-black inline-block animate-glow">
+        <video 
+          src="/images/profile/avatar.mp4" 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="max-w-[200px] h-auto block"
+        />
+      </div>
+      <div className="absolute bottom-6 left-6 z-20 text-white">
+        <h3 className="text-xl font-bold">Medical Assistant</h3>
+        <p className="text-sm opacity-80">Your personal medical butler</p>
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
@@ -181,49 +136,49 @@ const WorkExperiencePage: React.FC = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <FadeIn>
-            <h2 className="text-3xl font-bold text-center mb-4">Golang Advanced Learning Plan</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">Summary of Medibot Project</h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-             Focused on high-concurrency scenarios and blockchain development.
+            Intelligent Healthcare Assistant Platform
             </p>
           </FadeIn>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {[
               {
-                icon: <Code className="h-10 w-10 text-primary" />,
-                title: "Advanced Golang Fundamentals",
-                description: "Concurrency Deep Dive like goroutine, channel, sync package. Performance Optimization. Advanced Standard Library like goroutine feaks."
+                icon: <Code className="h-6 w-6 text-primary" />,
+                title: "Explore and practice cost-effective domain model fine-tuning methods",
+                description: "1.Aiming at the problem of high training costs when large models are applied in vertical fields, this project intends to adopt Parameter-Efficient Fine-Tuning (PEFT) technology, especially QLoRA (Quantized Low-Rank Adaptation), to fine-tune open-source large language models. The goal is to verify that this method can effectively inject professional knowledge in the medical field, consultation logic, and structured output capabilities into the model with limited computing resources."
               },
               {
-                icon: <Languages className="h-10 w-10 text-primary" />,
-                title: "High-Concurrency Systems",
-                description: "Building Scalable Services using token bucket and sliding window to implement rate limiting. gRPC for inter-service communication."
+                icon: <Languages className="h-6 w-6 text-primary" />,
+                title: "Design and implement an inquiry mechanism driven by personalized health records",
+                description: "One of the core innovations of this project is to realize truly personalized consultations. The goal is to design a set of data models and business logic that can integrate users' health records. In the interaction with the model, users' personal health status will be dynamically incorporated into the prompt as key context information, thereby guiding the model to generate questions and suggestions that are highly relevant to users' individual situations."
               },
               {
-                icon: <LineChart className="h-10 w-10 text-primary" />,
-                title: "Blockchain Development in Go",
-                description: "Blockchain Core Concepts including hashing, Merkle trees, consensus. Solidity basics, interacting with Ethereum. Layer-2 solutions, token standards."
+                icon: <LineChart className="h-6 w-6 text-primary" />,
+                title: "Develop a fully functional full-stack prototype system",
+                description: "3.To verify the end-to-end feasibility of the technical solution, this project will develop a complete application prototype. The goals include: a user-friendly WeChat Mini Program front-end for user interaction and data input; a stable and reliable back-end server based on the Flask framework for processing business logic and data persistence; and a high-performance model inference service deployed based on the vLLM framework to ensure a smooth user experience."
               },
               {
-                icon: <MessageSquare className="h-10 w-10 text-primary" />,
-                title: "Real-World Projects",
-                description: "High-Concurrency Project like cryptocurrency exchange matching engine. Blockchain Project like a cross-chain bridge or DAO goverance tool."
+                icon: <MessageSquare className="h-6 w-6 text-primary" />,
+                title: "Evaluate the comprehensive performance of the fine-tuned model and the system",
+                description: "Conduct qualitative and quantitative evaluations of the project results. The goals are: at the technical level, evaluate the improvements in efficiency (training cost, inference speed) brought by QLoRA fine-tuning and vLLM deployment; at the application level, verify the effectiveness, accuracy, and practicality of the system in simulated consultation scenarios through functional tests and effect evaluations."
               },
               {
-                icon: <Database className="h-10 w-10 text-primary" />,
-                title: "Concurrency Optimization",
-                description: "Lock-free algorithms, sharding techniques, and non-blocking I/O. Real-time event processing with Kafka/Pulsar and Go."
+                icon: <Database className="h-6 w-6 text-primary" />,
+                title: "Experimental Results",
+                description: "In this experiment, we directly adopted medical field instruction fine-tuning samples generated based on the OpenGPT framework. These samples were constructed by OpenGPT in combination with professional medical data provided by NHS.UK (National Health Service), featuring high domain relevance and accuracy, and are suitable for model fine-tuning tasks in the medical and health field. Finally, we converted the data generated by OpenGPT into data in Alpaca format."
               },
               {
-                icon: <Building className="h-10 w-10 text-primary" />,
-                title: "Cutting-Edge Blockchain",
-                description: "Implement zk-SNARKs/zk-STARKs with Go. Optimistic/Pessimistic rollups, sidechains, and Polkadot/Cosmos interoperability. Reverse-engineer EVM bytecode."
+                icon: <Building className="h-6 w-6 text-primary" />,
+                title: "Future Work",
+                description: "Expand the model to support the analysis of images uploaded by users (such as photos of rashes and laboratory test sheets) to achieve multimodal diagnosis. Build a medical knowledge base to conduct real-time verification of key information generated by the model, further improving reliability. Develop a doctor-side interface to push the preliminary diagnosis summary generated by AI to real doctors for review and correction, forming a human-machine collaborative working mode."
               }
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 100} className="h-full">
                 <Card className="h-full border-border hover:border-primary/50 transition-colors duration-300">
                   <CardContent className="p-6">
-                    <div className="mb-4 p-2 rounded-full w-16 h-16 flex items-center justify-center bg-primary/10">
+                    <div className="mb-4 p-1 rounded-full w-12 h-12 flex items-center justify-center bg-primary/10">
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-2">{item.title}</h3>

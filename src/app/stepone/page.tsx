@@ -23,6 +23,10 @@ const Page = () => {
 
   const hobbies = [
     {
+      image: "/images/hobbies/1-0.jpg",
+      videolUrl: "/videos/hobbies/",
+    },
+    {
       image: "/images/hobbies/1-1.jpg",
       videolUrl: "/videos/hobbies/",
     },
@@ -56,7 +60,7 @@ const Page = () => {
           </h2>
   
           {/* Hobbies Grid */}
-          <section id="hobbies" className="py-16">
+          <section id="hobbies" className="py-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {hobbies.map((hobby, index) => (
                 <div 
@@ -65,7 +69,7 @@ const Page = () => {
                   // onClick={() => handleClick(hobby.videoUrl)}
                 >
                 {/* Background Image */}
-                <div className="h-64 overflow-hidden">
+                <div className="h-90 overflow-hidden">
                   <img
                     src={hobby.image}
                     // alt={hobby.title}
